@@ -9,6 +9,6 @@ DOCKER_RUN="docker run \
             --mount type=bind,src=`pwd`/SUMO,dst=$KBDIR \
             --mount type=bind,src=`pwd`/config.xml,dst=$KBDIR/config.xml \
             --mount type=bind,src=`pwd`/WordNetMappings,dst=$KBDIR/WordNetMappings \
-            sigma:kee"
+            sigmakee:kabir"
 
 $DOCKER_RUN

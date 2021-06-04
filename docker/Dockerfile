@@ -1,4 +1,4 @@
-FROM tomcat:latest
+FROM tomcat:8.5.42-jdk8-openjdk
 
 ENV SIGMADIR=/sigma 
 
@@ -41,5 +41,5 @@ RUN apt update &&\
     cd $KBDIR &&\
     sed -i "s/.sigmakee/sigmakee/g" config.xml &&\
     sed -i 's/~/\'"$SIGMADIR"'/g' config.xml &&\
-    rm -r $WORKSPACE &&\
+#   rm -r $WORKSPACE &&\
     chmod -R 777 $SIGMADIR
